@@ -1,0 +1,122 @@
+:root {
+  --inbetween-transition-block-col: white;
+  --fallback-transition-block-col: yellow;
+/*  */
+  --block-col: #f1e8e6; /* Style as appropriate to your colour palette. */
+}
+
+body {
+  overflow: hidden;
+  color: #111;
+}
+a {
+  color: #111;
+  text-decoration: none;
+}
+.header {
+  position: absolute;
+  z-index: 200;
+  width: 100%;
+  top: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.header .logo {
+  margin-left: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.header ul {
+  display: flex;
+  list-style: none;
+  margin-right: 30px;
+}
+.link {
+  position: relative;
+  z-index: 250;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+
+/* TRANSITION */
+.splash{
+  display: none;
+  position: absolute;
+  z-index: 199; /* change to 201 for full screen splash (cover header) */
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--block-col);
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+.loading{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -40%);
+  z-index: 102;
+  color: #ccc;
+  font-size: 1.2rem;
+  font-style: italic;
+  opacity: .9;
+}
+.transition-effect {
+  position: absolute;
+  z-index: 100;
+  background-color: var(--inbetween-transition-block-col);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+/* \ TRANSITION */
+
+/* IMAGE BACKGROUND CONFIG */
+.full-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--fallback-transition-block-col);
+}
+.home-overlay {
+  background: url(https://easycss.github.io/easyimage/img3.png) no-repeat;
+  background-size: cover;
+}
+
+/* BLOCK COLOUR BACKGROUND CONFIG */
+.block-col{
+  background-color: #f55951;  /* if not specified --fallback-transition-block-col is used  */
+}
+/*  */
+/*  */
+/* PAGE LAYOUT */
+h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.container {
+  z-index: 50;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 300px);
+}
