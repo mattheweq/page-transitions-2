@@ -1,8 +1,6 @@
+[LIVE DEMO](https://mattheweq.com/page-transitions-2/)
+
 ![Preview](./preview.png)
-
-# Preview
-
-[LIVE DEMO](https://username-matthew.github.io/page-transitions-2)
 
 ### A react component which animates a left to right wipe transition using GSAP.
 
